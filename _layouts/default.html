@@ -1,19 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-  {% include head.html %}
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <body>
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    {% include header.html %}
+    <title>
+      {% if page.title == "Home" %}
+        {{ site.title }} &middot; {{ site.tagline }}
+      {% else %}
+        {{ page.title }} &middot; {{ site.title }}
+      {% endif %}
+    </title>
 
-    <div class="page-content">
-      <div class="wrap">
+    <script type="text/javascript" src="{{ site.baseurl }}/scripts/jquery-2.1.0.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/master.css">
+
+  </head>
+
+  <body class="pure-g" id="layout">
+    <header class="pure-u-1-4 pure-u-sm-1-8 pure-u-md-1-10">
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <i class="fa fa-navicon fa-2x"></i>
+      </a>
+      <h1 id="main-title" class="main-title">{{ site.title }} </h1>
+      <nav id="menu" class="pure-menu pure-menu-open">
+        <ul>
+          <li class="">
+            <a href="{{ site.baseurl }}/"><strong>Home</strong></a>
+          </li>
+          <li class="">
+            <a id="{% if page.url == "/" %}page-active{% endif %}" href="{{ site.baseurl }}/">About</a>
+          </li>
+          {% comment %}
+            The code below dynamically generates a nav of pages with
+            `layout: page` in the front-matter.
+          {% endcomment %}
+
+          {% assign pages_list = site.pages %}
+          {% for node in pages_list %}
+            {% if node.title != null %}
+              {% if node.layout == "page" and node.url != "/" %}
+                <li class="">
+                  <a id="{% if page.url == node.url %}page-active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+                </li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          <li class="">
+            <a href="http://portlandcodeschool.com/" class="nav-item">PCS Home</a>
+          </li>
+        </ul>
+        <div id="logo-side-bar" class="img-wrap">
+          <img class="pure-img" src="{{ site.baseurl}}/img/pcs-orange.svg">
+        </div>
+
+      </nav>
+   
+    </header>
+
+    <section id="main-content" class="pure-u-3-4 pure-u-sm-3-4 pure-u-md-2-3 pure-u-lg-3-5">
       {{ content }}
+    </section>
+    <footer id="info-footer" class="pure-u-1">
+      <div>
+        &copy; {{ site.time | date: '%Y' }} Alan Zimmerman
       </div>
-    </div>
+      <div>
+        v{{ site.version }}
+      </div>
+    </footer>
 
-    {% include footer.html %}
-
-    </body>
+    <script type="text/javascript" src="{{ site.baseurl }}/scripts/ui-minor-utils.js"></script>
+  </body>
 </html>

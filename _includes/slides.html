@@ -1,0 +1,11 @@
+<div class="posts classes">
+  {% for post in site.posts reversed %}
+    {% if post.layout == "slides" %}
+      <div>
+        <strong class="post-title">
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </strong>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
