@@ -3,14 +3,60 @@ layout: page
 title: Resources
 ---
 
-You may find some of these resources to be useful companion materials while
-learning JavaScript.
+#### Local Resources
 
-## Sites
+* [Calagator][calagator]
+  A "unified calendar for the technology community of Portland, Oregon." You can always find a meetup or group to hangout and learn from.
+
+
+[ePDX](http://epdx.org)
+
+[PDX Web dev meetup](http://www.meetup.com/pdxweb/)
+
+[PDX UX meetup](http://www.meetup.com/pdxweb/)
+
+[Silicon Florist](http://siliconflorist.com/)
+
+
+
+#### Around the Web
+
+[Subtraction](http://www.subtraction.com/)
+
+[Basecamp's blog](http://signalvnoise.com/)
+
+[Under Consideration](http://www.underconsideration.com/)
+
+[HTML5 weekly](http://html5weekly.com/)
+
+[CSS Weekly](http://css-weekly.com/)
+
+[Web Design Weekly](http://web-design-weekly.com/)
+
+[This Developer's Life](http://thisdeveloperslife.com/)
+
+
+### Additional resources
+
+Take w3schools with a grain of salt, but it's good for beginners.
+
+[HTML Reference](http://www.w3schools.com/tags/default.asp)
+
+[CSS Reference](http://www.w3schools.com/cssref/default.asp)
+
+
+
+[GIT for grown ups](http://24ways.org/2013/git-for-grownups/)
 
 * [Mozilla Developer Network][mdn]  
   Mozilla has done a great job documenting many of the tools needed to build
   websites. Their documentation on JavaScript, in particular is great.
+
+
+
+
+* [HTML 5 Rocks][html5rocks]  
+  Google-sponsored site with intermediate/advanced tutorials
 
 * [WebPlatform][webplatform]  
   Joint project by many organizations to do a better job documenting HTML, CSS,
@@ -83,12 +129,6 @@ learning JavaScript.
 
 ## Books
 
-I learn best by doing rather than reading, so please note that I have only
-paged through most of these books. I'm sharing my thoughts from the little time
-that I spent with each book in hopes that it helps expedite your search. I
-would suggest reading reviews on Amazon and/or paging through the book yourself
-at [Powell's][powells] to make sure the book matches your learning style and
-expectations.
 
 * _jQuery and JavaScript Phrasebook_, Brad Dayley  
   Beginner, $30  
@@ -152,7 +192,19 @@ expectations.
   on concepts like scope and closures.
 
 
+
+
+[calagator]: http://calagator.org/events
+
+
+
 [mdn]: https://developer.mozilla.org/
+
+
+[html5rocks]: http://www.html5rocks.com/
+
+
+
 [webplatform]: http://www.webplatform.org
 [jsbooks]: http://jsbooks.revolunet.com
 [nodeschool]: http://nodeschool.io/
